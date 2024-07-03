@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/jsx-key */
 /* eslint-disable react/prop-types */
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { BsXLg } from 'react-icons/bs'
 import './category.css'
 import CATEGORY_DETAILS from '../data/CATEGORY-DETAILS'
@@ -166,6 +166,33 @@ export default function Category({
         }, 500);
     }
 
+    const toastContentRef = useRef(null);
+    const [isDragging, setIsDragging] = useState(false);
+    const [startX, setStartX] = useState(0);
+    const [scrollLeft, setScrollLeft] = useState(0);
+
+    const handleMouseDown = (e) => {
+        setIsDragging(true);
+        setStartX(e.pageX - toastContentRef.current.offsetLeft);
+        setScrollLeft(toastContentRef.current.scrollLeft);
+    };
+
+    const handleMouseMove = (e) => {
+        if (!isDragging) return;
+        e.preventDefault();
+        const x = e.pageX - toastContentRef.current.offsetLeft;
+        const walk = (x - startX) * 3; // The multiplier can be adjusted for sensitivity
+        toastContentRef.current.scrollLeft = scrollLeft - walk;
+    };
+
+    const handleMouseUp = () => {
+        setIsDragging(false);
+    };
+
+    const handleMouseLeave = () => {
+        setIsDragging(false);
+    };
+
     return (
         <>
         {
@@ -183,17 +210,29 @@ export default function Category({
         {
             toast &&
             <div id="toast" className="toast">
-                <button className="close" onClick={handleToast}><BsXLg /></button>
-                <h3>Welcome to the Resume Overview 📄</h3>
-                <p>This side pane offers a comprehensive guide to crafting your chronological resume. 
-                Follow the chronological order for your work experiences, starting with the most recent. 
-                Pay attention to the structure, emphasizing work history, career growth, and education.</p>
-                <h3>🔍 Explore the format</h3>
-                <p>This format is great for showcasing a strong work history and career progression. 
-                Check out the tips and suggestions in this side pane for a successful resume submission. Happy crafting! ✨</p>
-                <div className="mt-20">
-                    <input type="checkbox" checked={false} onChange={handleDoNotShowAgain} />
-                    <label>{`Don't show again`}</label>
+                <div className="drag-text">
+                    Drag
+                </div>
+                <div
+                    className="toast-content"
+                    ref={toastContentRef}
+                    onMouseDown={handleMouseDown}
+                    onMouseMove={handleMouseMove}
+                    onMouseUp={handleMouseUp}
+                    onMouseLeave={handleMouseLeave}
+                >
+                    <button className="close" onClick={handleToast}><BsXLg /></button>
+                    <h4>Welcome to the Resume Overview 📄</h4>
+                    <p>This side pane offers a comprehensive guide to crafting your chronological resume. 
+                        Follow the chronological order for your work experiences, starting with the most recent. 
+                        Pay attention to the structure, emphasizing work history, career growth, and education.</p>
+                    <h4>🔍 Explore the format</h4>
+                    <p>This format is great for showcasing a strong work history and career progression. 
+                        Check out the tips and suggestions in this side pane for a successful resume submission. Happy crafting! ✨</p>
+                    <div className="mt-20">
+                        <input type="checkbox" checked={false} onChange={handleDoNotShowAgain} />
+                        <label>{`Don't show again`}</label>
+                    </div>
                 </div>
             </div>
         }
