@@ -1,0 +1,269 @@
+.resume-formats-popup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+    z-index: 1;
+}
+
+.resume-formats-popup .close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    border: none;
+    background-color: transparent;
+    font-family: 'Work Sans', sans-serif;
+    color: #fff;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+    font-size: 30px;
+    padding: 0;
+}
+
+.resume-formats-popup h3 {
+    font-size: 32px;
+    font-weight: 300;
+    margin: 0;
+    padding: 15px;
+    font-family: 'Work Sans', sans-serif;
+    color: #545454;
+    text-align: center;
+    width: 100%;
+}
+
+.resume-formats {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    padding: 20px 20px 40px 20px;
+    gap: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    transition: all 0.5s ease-in-out;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: relative;
+    width: 70%;
+    height: 90%;
+    border-radius: 10px;
+}
+
+.resume-formats .instructions {
+    font-size: 16px;
+    font-weight: 300;
+    margin: 25px 0 15px 0;
+    padding: 0;
+    font-family: 'Work Sans', sans-serif;
+    color: #000;
+    width: 80%;
+    box-sizing: border-box;
+    text-align: left;
+    list-style-type: circle;
+}
+
+.resume-formats .instructions li {
+    padding: 4px 0 6px 0;
+}
+
+.resume-template {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: auto;
+    box-sizing: border-box;
+    padding: 0;
+    gap: 1px;
+    margin: 0;
+    border: 1px solid #0000004f;
+    border-radius: 10px;
+}
+
+.image {
+    width: 60%;
+    height: auto;
+    object-fit: cover;
+}
+
+.resume-template img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    margin: 0;
+    outline: 1px solid #00000011;
+    border-radius: 10px 10px 0 0;
+    object-fit: cover;
+}
+
+.resume-template img:hover,
+.resume-template img:focus,
+.resume-template img:active {
+    outline: 1px solid rgba(46, 100, 255, 1);
+}
+
+.resume-template img.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    box-shadow: none;
+    outline: 1px solid #00000011;
+}
+.resume-template img.disabled:hover,
+.resume-template img.disabled:focus,
+.resume-template img.disabled:active {
+    opacity: 0.5;
+    cursor: not-allowed;
+    box-shadow: none;
+    outline: none;
+}
+
+.resume-template h5 {
+    font-size: 16px;
+    font-weight: 300;
+    margin: 0;
+    padding: 10px 0 10px 0;
+    font-family: 'Work Sans', sans-serif;
+    color: #545454;
+    text-align: center;
+}
+
+.resume-template button {
+    width: 100%;
+    border-radius: 0 0 10px 10px;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 15px 25px;
+    font-family: 'Work Sans', sans-serif;
+    transition: all 0.2s ease-in-out;
+    background-color: rgba(46, 100, 255, 1);
+    color: #fff;
+    margin: 0;
+    cursor: pointer;
+}
+
+.resume-template button:hover {
+    background-color: rgba(46, 100, 255, 0.9);
+}
+
+.resume-template button.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.resume-template button.disabled:hover {
+    background-color: rgba(46, 100, 255, 1);
+}
+
+.back {
+    position: absolute;
+    top: 25px;
+    left: 30px;
+    border: none;
+    background-color: transparent;
+    font-family: 'Work Sans', sans-serif;
+    color: #545454;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+    font-size: 30px;
+    padding: 0;
+    z-index: 1;
+}
+
+.print-download {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    width: auto;
+    height: auto;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    gap: 20px;
+    position: absolute;
+    top: 15px;
+    right: 30px;
+}
+
+.print {
+    border: none;
+    background-color: transparent;
+    font-family: 'Work Sans', sans-serif;
+    color: #545454;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+    font-size: 30px;
+    padding: 0;
+}
+
+.download-btn {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    border: none;
+    background-color: transparent;
+    font-family: 'Work Sans', sans-serif;
+    color: #545454;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+    font-size: 30px;
+    padding: 0;
+    z-index: 1;
+}
+
+@media screen and (max-width: 768px) {
+    .resume-formats-popup h3 {
+        font-size: 24px;
+        padding: 15px 0 15px 0;
+    }
+    
+    .resume-formats-popup .close {
+        font-size: 22px;
+    }
+
+    .resume-formats {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+        box-sizing: border-box;
+        flex-wrap: wrap;
+        padding: 20px 20px 40px 20px;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .resume-formats .instructions {
+        padding: 5px 15px;
+        width: 100%;
+    }
+
+    .image {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+}
+
+@media print {
+    .resume-formats {
+        box-shadow: none;
+    }
+    .back {
+        display: none;
+    }
+}
