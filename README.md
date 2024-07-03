@@ -57,10 +57,10 @@ The Resume Builder project provides a user-friendly interface to create and cust
 5. Open the provided URL in a web browser to access the application.
 
 ## Live Demo
-Check out the live version of the project [here](https://resume-monster.vercel.app/)
+Check out the live version of the project [here](https://web-resume-monster.vercel.app/)
 
 ## Support
-For any inquiries or support requests, please reach out to me through our [GitHub repository](https://github.com/umar-anwar-dev/flashcard-quiz).
+For any inquiries or support requests, please reach out to me through our [GitHub repository](https://github.com/umar-anwar-dev/web.resume.monster).
 
 For direct email inquiries, contact: [umaranwar.d.e.v@gmail.com](mailto:umaranwar.d.e.v@gmail.com).
 
