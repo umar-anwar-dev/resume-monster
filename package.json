@@ -31,6 +31,6 @@
   "description": "Resume builder application with React and Vite",
   "main": "vite.config.js",
   "keywords": [],
-  "author": "Aitisam Yaseen",
+  "author": "Umar Anwar",
   "license": "ISC"
 }

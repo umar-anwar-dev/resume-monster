@@ -1,4 +1,4 @@
-# 4 - Resume Monster Application
+# Resume Monster Application
 
 Welcome to the Resume Builder project! Below, you'll find an overview and instructions for each resume category type, along with additional features to enhance your resume-building experience.
 
