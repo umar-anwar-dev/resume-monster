@@ -60,12 +60,17 @@ The Resume Builder project provides a user-friendly interface to create and cust
 Check out the live version of the project [here](https://resume-monster.vercel.app/)
 
 ## Support
-For any inquiries or support requests, please contact the development team through our GitHub repository.
+For any inquiries or support requests, please reach out to me through our [GitHub repository](https://github.com/umar-anwar-dev/flashcard-quiz).
+
+For direct email inquiries, contact: [umaranwar.d.e.v@gmail.com](mailto:umaranwar.d.e.v@gmail.com).
+
+## License
+This project is licensed under the MIT License. You are free to use and modify the code according to your requirements.
 
 ## Note
 This project is currently under development, with only one resume category and one template available. More categories and templates will be added in future updates.
 
-Start building your professional resume with our Resume Builder project today and stand out from the crowd!
+Happy coding!
 
 
 
